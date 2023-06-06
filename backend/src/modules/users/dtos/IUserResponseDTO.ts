@@ -1,6 +1,7 @@
 interface IUserResponseDTO {
-  id: string;
+  id?: string;
   name: string;
+  email: string;
 }
 
 export { IUserResponseDTO };

@@ -8,15 +8,18 @@ import defaultTheme from './styles/colors/default';
 import AppProvider from './hooks';
 
 import Routes from './routes';
+import { ProductProvider } from './hooks/product';
 
 const App: React.FC = () => {
   return (
     <>
       <AppProvider>
         <ThemeProvider theme={defaultTheme}>
-          <BrowserRouter>
-            <Routes />
-          </BrowserRouter>
+          <ProductProvider>
+            <BrowserRouter>
+              <Routes />
+            </BrowserRouter>
+          </ProductProvider>
         </ThemeProvider>
       </AppProvider>
       <GlobalStyle />

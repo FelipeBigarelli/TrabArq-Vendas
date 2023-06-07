@@ -11,6 +11,7 @@ interface IProductsRepository {
   list(): Promise<Product[]>;
   findByName(name: string): Promise<Product | undefined>;
   findAllById(products: IFindProducts[]): Promise<Product[]>;
+  findById(id: string): Promise<Product>;
   updateQuantity(products: IUpdateProductsQuantityDTO[]): Promise<Product[]>;
 }
 

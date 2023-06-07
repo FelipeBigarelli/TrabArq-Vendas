@@ -2,39 +2,26 @@ import React from 'react';
 
 import { Container, Content } from './styles';
 
-import logoImg from '../../assets/logo.png';
-import adotarImg from '../../assets/adotar.png';
-import searchAnimalsImg from '../../assets/search-animals.png';
-import logoutImg from '../../assets/logoutImg.png';
-import { useAuth } from '../../hooks/auth';
+import logoImg from '../../assets/sales.png';
+import productsImg from '../../assets/dairy-products.png';
+import cartImg from '../../assets/shopping-cart.png';
 
 const Header: React.FC = () => {
-  const { signOut, user } = useAuth();
-
   return (
     <Container>
       <Content>
-        <a className="menu-item" href="/animals">
-          <img src={searchAnimalsImg} alt="Procurar animais" />
-          Animais
-        </a>
-        <a className="menu-item" href="/new-post">
-          <img src={adotarImg} alt="Adotar" />
-          Postar
+        <a className="menu-item" href="/products">
+          <img src={productsImg} alt="Produtos" />
+          Produtos
         </a>
 
         <a href="/dashboard" className="logo-header">
-          <img src={logoImg} alt="AdopetCP" />
+          <img src={logoImg} alt="Sales" />
         </a>
 
-        <a id="menu-item-avatar" href="/profile">
-          <img src={user.name} alt="" id="header-avatar" />
-          Perfil
-        </a>
-
-        <a className="menu-item" href="/" onClick={signOut}>
-          <img src={logoutImg} alt="" />
-          Sair
+        <a href="/cart" className="logo-header">
+          <img src={cartImg} alt="Cart" />
+          Carrinho
         </a>
       </Content>
     </Container>

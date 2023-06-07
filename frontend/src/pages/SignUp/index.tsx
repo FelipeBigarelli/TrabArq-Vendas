@@ -8,7 +8,7 @@ import api from '../../services/api';
 
 import getValidationErrors from '../../utils/getValidationErrors';
 
-import logoImg from '../../assets/logo.png';
+import logoImg from '../../assets/sales.png';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';

@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import { shade } from 'polished';
 
-import signInBackground from '../../assets/signInBackground.jpg';
+import signInBackground from '../../assets/market.jpg';
 
 export const Container = styled.div`
   height: 100vh;
@@ -117,7 +117,6 @@ export const AnimationContainer = styled.div`
 
   img {
     height: 120px;
-    filter: brightness(0%);
   }
 `;
 

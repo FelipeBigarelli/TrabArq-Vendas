@@ -20,12 +20,11 @@ export const Container = styled.header`
 
 export const Content = styled.div`
   display: flex;
+  justify-content: space-around;
   width: 100%;
-  max-width: 1200px;
 
   .logo-header img {
     height: 80px;
-    filter: brightness(0%);
     transition: filter 0.2s;
   }
 
@@ -39,7 +38,6 @@ export const Content = styled.div`
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 500;
 
-    width: 100%;
     height: 64px;
 
     display: flex;
@@ -68,6 +66,12 @@ export const Content = styled.div`
       padding-right: 0;
       margin-right: 16px;
       object-fit: cover;
+    }
+
+    &:last-child {
+      img {
+        height: 64px;
+      }
     }
   }
 `;

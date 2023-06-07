@@ -15,12 +15,12 @@ export const Container = styled.footer`
 
 export const Content = styled.div`
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   height: inherit;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   a {
     display: flex;
@@ -32,27 +32,12 @@ export const Content = styled.div`
 
     transition: all 0.2s;
 
-    &:hover {
-      padding-top: 8px;
-    }
-  }
-
-  a:first-child {
-    display: flex;
-
-    img {
-      height: 56px;
-      filter: brightness(0%);
-    }
-  }
-
-  a:last-child {
-    display: flex;
-
     img {
       height: 48px;
-      filter: brightness(0%);
-      padding-right: 8px;
+    }
+
+    &:hover {
+      padding-bottom: 4px;
     }
   }
 `;

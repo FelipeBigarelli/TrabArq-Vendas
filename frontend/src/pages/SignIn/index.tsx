@@ -5,7 +5,7 @@ import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
 import { Link, useHistory } from 'react-router-dom';
 
-import logoImg from '../../assets/logo.png';
+import logoImg from '../../assets/sales.png';
 import getValidationErrors from '../../utils/getValidationErrors';
 
 import { useAuth } from '../../hooks/auth';
@@ -49,7 +49,7 @@ const SignIn: React.FC = () => {
           password: data.password,
         });
 
-        history.push('/animals');
+        history.push('/dashboard');
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
           const errors = getValidationErrors(err);
@@ -96,8 +96,6 @@ const SignIn: React.FC = () => {
             />
 
             <Button type="submit">Entrar</Button>
-
-            <a href="forgot">Esqueci minha senha</a>
           </Form>
 
           <Link to="/signup">

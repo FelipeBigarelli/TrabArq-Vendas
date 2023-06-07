@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   Route as ReactDOMRoute,
-  RouteProps as ReactDOMRouteProps,
+  RouteProps as ReactRouterProps,
   Redirect,
 } from 'react-router-dom';
 
 import { useAuth } from '../hooks/auth';
 
-interface RouteProps extends ReactDOMRouteProps {
+interface RouteProps extends ReactRouterProps {
   isPrivate?: boolean;
   component: React.ComponentType;
 }
@@ -20,7 +20,6 @@ const Route: React.FC<RouteProps> = ({
   const { user } = useAuth();
 
   return (
-    // render: modificar logistica para mostrar componente em tela
     <ReactDOMRoute
       {...rest}
       render={({ location }) => {

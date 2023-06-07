@@ -2,10 +2,13 @@ import React from 'react';
 
 import { Container, Content } from './styles';
 
-import logoImg from '../../assets/logo.png';
-import aboutImg from '../../assets/about.png';
+import logoImg from '../../assets/sales.png';
+import logoutImg from '../../assets/logoutImg.png';
+import { useAuth } from '../../hooks/auth';
 
 const Footer: React.FC = () => {
+  const { signOut } = useAuth();
+
   return (
     <Container>
       <Content>
@@ -13,9 +16,9 @@ const Footer: React.FC = () => {
           <img src={logoImg} alt="" />
         </a>
 
-        <a href="/about">
-          <img src={aboutImg} alt="" />
-          Sobre o AdopetCP
+        <a className="menu-item" href="/" onClick={signOut}>
+          <img src={logoutImg} alt="" />
+          Sair
         </a>
       </Content>
     </Container>

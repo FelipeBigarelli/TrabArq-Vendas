@@ -6,6 +6,8 @@ import Route from './Route';
 
 import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
+import Products from '../pages/Products';
+import Cart from '../pages/Cart';
 
 const Routes: React.FC = () => (
   <Switch>
@@ -13,6 +15,8 @@ const Routes: React.FC = () => (
     <Route path="/signup" component={SignUp} />
 
     <Route path="/dashboard" component={Dashboard} isPrivate />
+    <Route path="/products" component={Products} isPrivate />
+    <Route path="/cart" component={Cart} isPrivate />
   </Switch>
 );
 

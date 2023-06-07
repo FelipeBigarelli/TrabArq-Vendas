@@ -14,9 +14,6 @@ class ProductsRepository implements IProductsRepository {
   constructor() {
     this.repository = getRepository(Product);
   }
-  findById(id: string): Promise<Product> {
-    throw new Error('Method not implemented.');
-  }
 
   async create({
     name,
@@ -58,6 +55,12 @@ class ProductsRepository implements IProductsRepository {
     });
 
     return findAllProductsById;
+  }
+
+  async findById(id: string): Promise<Product> {
+    const product = await this.repository.findOne({ where: { id }});
+
+    return product;
   }
 
   async updateQuantity(

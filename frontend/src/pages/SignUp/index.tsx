@@ -51,7 +51,7 @@ const SignUp: React.FC = () => {
         addToast({
           type: 'success',
           title: 'Cadastro realizado',
-          description: 'Você já pode fazer seu logon no AdopetCP',
+          description: 'Você já pode fazer seu logon no AppVendas',
         });
       } catch (err) {
         if (err instanceof Yup.ValidationError) {
@@ -85,7 +85,7 @@ const SignUp: React.FC = () => {
 
       <Content>
         <AnimationContainer>
-          <img src={logoImg} alt="AdopetCP" />
+          <img src={logoImg} alt="AppVendas" />
 
           <Form onSubmit={handleSubmit} ref={formRef}>
             <h1>Realize seu cadastro</h1>

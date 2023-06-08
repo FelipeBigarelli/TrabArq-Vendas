@@ -11,6 +11,6 @@ const findProductByIdController = new FindProductByIdController();
 
 productsRoutes.post('/', createProductController.handle);
 productsRoutes.get('/', listProductsController.handle);
-productsRoutes.get('/', findProductByIdController.handle);
+productsRoutes.get('/:id', findProductByIdController.handle);
 
 export { productsRoutes };

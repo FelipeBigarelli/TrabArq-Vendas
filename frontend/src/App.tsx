@@ -9,17 +9,20 @@ import AppProvider from './hooks';
 
 import Routes from './routes';
 import { ProductProvider } from './hooks/product';
+import { CartProvider } from './hooks/useCart';
 
 const App: React.FC = () => {
   return (
     <>
       <AppProvider>
         <ThemeProvider theme={defaultTheme}>
-          <ProductProvider>
-            <BrowserRouter>
-              <Routes />
-            </BrowserRouter>
-          </ProductProvider>
+          <CartProvider>
+            <ProductProvider>
+              <BrowserRouter>
+                <Routes />
+              </BrowserRouter>
+            </ProductProvider>
+          </CartProvider>
         </ThemeProvider>
       </AppProvider>
       <GlobalStyle />

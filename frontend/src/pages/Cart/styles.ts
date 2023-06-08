@@ -1,108 +1,82 @@
 import styled from 'styled-components';
-import { darken, lighten } from 'polished';
+import { darken, lighten, shade } from 'polished';
 
 export const Container = styled.div`
-  padding: 30px;
-  background: #fff;
-  border-radius: 4px;
+  height: 100vh;
+  width: 100%;
+  padding: 96px 0;
+  background: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.textColor};
 
-  footer {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    button {
-      background: #7159c1;
-      color: #fff;
-      border: 0;
-      border-radius: 4px;
-      padding: 12px 20px;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: background 0.2s;
-
-      &:hover {
-        background: ${darken(0.06, '#7159c1')};
-      }
-    }
+  h1 {
+    padding: 32px 0 0 240px;
   }
 `;
 
-export const ProductTable = styled.table`
+export const Content = styled.div`
   width: 100%;
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 240px;
+`;
 
-  thead th {
-    color: #999;
-    text-align: left;
-    padding: 12px;
-  }
+export const CartContent = styled.div`
+  display: flex;
+  flex-direction: column;
 
-  tbody td {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-  }
+  height: auto;
+`;
 
-  img {
-    height: 100px;
-  }
+export const ProductCart = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: ${shade(0.05, '#fff')};
+  border-radius: 8px;
+  border: 1px solid #008968;
+
+  margin: 4px;
+  padding: 8px;
 
   strong {
-    color: #333;
-    display: block;
+    font-size: 24px;
+    padding-bottom: 8px;
+    color: #ff9000;
   }
 
-  span {
-    display: block;
-    margin-top: 5px;
-    font-size: 18px;
-    font-weight: bold;
+  .description {
+    padding: 4px 0 16px;
   }
+`;
 
-  div {
-    display: flex;
-    align-items: center;
-
-    input {
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      color: #666;
-      padding: 6px;
-      width: 50px;
-    }
-  }
+export const FinalizarPedido = styled.div`
+  padding-top: 4px;
 
   button {
-    background: none;
-    border: 0;
-    padding: 6px;
+    height: 32px;
+    width: 168px;
+    font-weight: 500;
 
-    svg {
-      color: #7159c1;
-      transition: color 0.2s;
-    }
+    border-radius: 4px;
+    border: none;
+    background: ${({ theme }) => theme.colors.orange};
+    transition: background-color 0.2s;
 
     &:hover {
-      svg {
-        color: ${darken(0.06, '#7159c1')};
-      }
+      background: ${shade(0.2, '#ff9000')};
     }
 
-    &:disabled {
-      svg {
-        color: ${lighten(0.25, '#7159c1')};
-        cursor: not-allowed;
-      }
-    }
+    margin-bottom: 8px;
   }
 `;
 
 export const Total = styled.div`
   display: flex;
   align-items: baseline;
-
+  flex-direction: row;
   span {
-    color: #999;
+    color: #008968;
     font-weight: bold;
   }
 

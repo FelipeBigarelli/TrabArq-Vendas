@@ -5,7 +5,7 @@ import { FindProductByIdUseCase } from './FindProductByIdUseCase';
 
 class FindProductByIdController {
   async handle(request: Request, response: Response): Promise<Response> {
-    const { id } = request.body;
+    const { id } = request.params;
 
     const findProductByIdUseCase = container.resolve(FindProductByIdUseCase);
 

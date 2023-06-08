@@ -10,8 +10,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   display: flex;
-  justify-content: center;
-
+  flex-direction: column;
   padding-top: 32px;
   margin: 0 auto;
 
@@ -22,6 +21,7 @@ export const Content = styled.div`
 export const Welcome = styled.div`
   h1 {
     padding-bottom: 40px;
+    font-size: 48px;
   }
 
   h2 {
@@ -29,3 +29,11 @@ export const Welcome = styled.div`
     font-size: 2em;
   }
 `;
+
+export const Orders = styled.div`
+  h1 {
+    font-size: 32px;
+  }
+`;
+
+export const OrdersContent = styled.div``;

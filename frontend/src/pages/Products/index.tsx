@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
+import { MdAddShoppingCart } from 'react-icons/md';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
